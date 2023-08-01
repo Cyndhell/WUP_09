@@ -128,4 +128,9 @@ print(results)
 
 ### Best Two regressor model
 
+```{r}
+roachModel= lm(Weight~Height+Width,data = pike)
+summary(roachModel)
+```
+
 ## Final Summary Statements
