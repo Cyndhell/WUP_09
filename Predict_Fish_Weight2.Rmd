@@ -68,6 +68,7 @@ For the best model for adjusted r-square is 0.94
 pike = filter(fishData, Species == "Pike")
 ```
 
+
 ### Best Models
 
 ```{r}
@@ -89,19 +90,25 @@ print(results)
 
 ```
 
+The best model two variable to predict in weight are Length 1 and Length 3. 
 
 ### Best Two regressor model
 
+The best two predictive regression model are Length 1 and Length 3.
+
 ```{r}
-pikeModel= lm(Weight~Height+Width,data = pike)
+pikeModel= lm(Weight~Length1+Length3,data = pike)
 summary(pikeModel)
 ```
+
+For the best model for adjusted r-square is 0.9649
 
 ## Roach
 
 ```{r}
 roach = filter(fishData, Species == "Roach")
 ```
+
 
 ### Best Models
 
@@ -124,13 +131,22 @@ print(results)
 
 ```
 
-
+The best model two variable to predict in weight are Length 3 and Width. 
 
 ### Best Two regressor model
 
+The best two predictive regression model are Length 1 and Width.
+
 ```{r}
-roachModel= lm(Weight~Height+Width,data = pike)
+roachModel= lm(Weight~Length3+Width,data = roach)
 summary(roachModel)
 ```
 
-## Final Summary Statements
+For the best model for adjusted r-square is 0.8482
+
+## Final Summary Statement
+
+In conclusion from lowest to highest adjusted r-square, among all of the model the lowest will be the roach 0.8482 and the highest will be the pike which 0.9694 and second highest is the perch which is 0.94. Among these model the best is pike because we need the highest adjusted r-square for the best one.
+
+
+
